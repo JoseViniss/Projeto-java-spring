@@ -10,6 +10,5 @@ public class ModeloPosRequestBody {
     
     private String nome;
     private String image;
-    private List<Camisa> camisas;
 
 }

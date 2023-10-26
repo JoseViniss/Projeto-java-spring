@@ -22,11 +22,11 @@ public class Modelo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
     private Long id;
+    
     private String nome;
     private String image;
 
-    @ManyToMany
-    private List<Camisa> camisas;
+    //@ManyToMany
+    //private List<Camisa> camisas;
 }

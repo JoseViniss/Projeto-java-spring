@@ -35,7 +35,6 @@ public class EstampaServices {
         Estampa estampa = Estampa.builder()
         .nome(estampaPosRequestBody.getNome())
         .image(estampaPosRequestBody.getImage())
-        .camisas(estampaPosRequestBody.getCamisas())
         .build();
         return estampaRpository.save(estampa);
     }
@@ -49,7 +48,6 @@ public class EstampaServices {
         Estampa estampa = Estampa.builder()
         .nome(estampaPutRequestBody.getNome())
         .image(estampaPutRequestBody.getImage())
-        .camisas(estampaPutRequestBody.getCamisas())
         .build();
         estampaRpository.save(estampa);
     }

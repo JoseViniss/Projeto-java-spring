@@ -1,6 +1,6 @@
 package raul.dev.projeto.classe;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,22 +36,23 @@ public class Camisa {
 
     private Double preco_uni;
     private String tamanho;
+    private String image;
 
-    @ManyToMany
+    @ManyToOne
     @JoinTable(
-        name = "Tabela Auxiliar",
+        name = "Camisa_Estampa",
         joinColumns = {@JoinColumn(name = "id_camisa", referencedColumnName = "id")},
         inverseJoinColumns = {@JoinColumn(name = "id_estampa", referencedColumnName = "id")}
     )
-    private List<Estampa> estampa;
+    private Estampa estampa;
 
-    @ManyToMany
+    @ManyToOne
     @JoinTable(
-        name = "Tabela Auxiliar",
+        name = "Camisa_Modelo",
         joinColumns = {@JoinColumn(name = "id_camisa", referencedColumnName = "id")},
         inverseJoinColumns = {@JoinColumn(name = "id_estampa", referencedColumnName = "id")}
     )
-    private List<Modelo> modelo;
+    private Modelo modelo;
 
 
 }

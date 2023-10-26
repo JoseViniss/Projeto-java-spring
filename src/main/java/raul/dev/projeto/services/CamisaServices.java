@@ -40,6 +40,7 @@ public class CamisaServices {
         .modelo(camisaPosRequestBody.getModelo())
         .preco_uni(camisaPosRequestBody.getPreco_uni())
         .tamanho(camisaPosRequestBody.getTamanho())
+        .image(camisaPosRequestBody.getImage())
         .build();
         return camisaRpository.save(camisa);
     }
@@ -55,6 +56,7 @@ public class CamisaServices {
         .modelo(camisaPutRequestBody.getModelo())
         .preco_uni(camisaPutRequestBody.getPreco_uni())
         .tamanho(camisaPutRequestBody.getTamanho())
+        .image(camisaPutRequestBody.getImage())
         .build();
         camisaRpository.save(camisa);
     }

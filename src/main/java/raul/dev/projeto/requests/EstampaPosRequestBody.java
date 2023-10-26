@@ -10,6 +10,5 @@ public class EstampaPosRequestBody {
     
     private String nome;
     private String image;
-    private List<Camisa> camisas;
     
 }

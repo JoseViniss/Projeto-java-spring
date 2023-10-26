@@ -34,7 +34,6 @@ public class ModeloServices {
         Modelo modelo = Modelo.builder()
         .nome(modeloPosRequestBody.getNome())
         .image(modeloPosRequestBody.getImage())
-        .camisas(modeloPosRequestBody.getCamisas())
         .build();
         return modeloRpository.save(modelo);
     }
@@ -48,8 +47,7 @@ public class ModeloServices {
         Modelo modelo = Modelo.builder()
         .nome(modeloPutRequestBody.getNome())
         .image(modeloPutRequestBody.getImage())
-        .camisas(modeloPutRequestBody.getCamisas())
-        .build();
+        .build(); 
         modeloRpository.save(modelo);
     }
 }

@@ -11,6 +11,5 @@ public class ModeloPutRequestBody {
     private long id;
     private String nome;
     private String image;
-    private List<Camisa> camisas;
     
 }

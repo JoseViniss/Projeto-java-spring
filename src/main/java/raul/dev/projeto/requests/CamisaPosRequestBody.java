@@ -9,9 +9,10 @@ import raul.dev.projeto.classe.Modelo;
 @Data
 public class CamisaPosRequestBody {
 
-    private List<Modelo> modelo;
-    private List<Estampa> estampa;
+    private Modelo modelo;
+    private Estampa estampa;
     private Double preco_uni;
     private String tamanho;
+    private String image;
     
 }
